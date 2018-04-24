@@ -100,19 +100,6 @@
         </js-module>
         <source-file src="src/android/Diagnostic.java" target-dir="src/cordova/plugins" />
 
-        <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <receiver
-                    android:name="cordova.plugins.Diagnostic$LocationProviderChangedReceiver">
-                <intent-filter>
-                    <action android:name="android.location.PROVIDERS_CHANGED" />
-                </intent-filter>
-            </receiver>
-            <receiver android:name="cordova.plugins.Diagnostic$NFCStateChangedReceiver">
-                <intent-filter>
-                    <action android:name="android.nfc.action.ADAPTER_STATE_CHANGED" />
-                </intent-filter>
-            </receiver>
-        </config-file>
     </platform>
 
     <!-- windows -->
